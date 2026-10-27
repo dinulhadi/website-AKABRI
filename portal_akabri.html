@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal Penerimaan AKABRI — Desain</title>
+<style>
+:root{--navy:#17365d;--navy2:#244e7c;--gold:#d7b45b;--ink:#243750;--muted:#687a90;--line:#dce5ef;--bg:#f2f5f9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+nav{height:76px;background:var(--navy);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 max(20px,calc((100% - 1180px)/2));gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:23px;letter-spacing:.5px}.crest{width:44px;height:44px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:25px}.brand small{display:block;font-size:10px;font-weight:500;letter-spacing:2px;margin-top:3px}
+.navlinks{display:flex;gap:24px;font-size:14px;color:#e8eef6}.tag{font-size:10px;letter-spacing:.7px;border:1px solid #e5ca7b;border-radius:5px;padding:7px 9px;color:#ffe6a0;white-space:nowrap}
+.hero{background:linear-gradient(115deg,#244e7c,#17365d 68%,#102743);color:white;padding:37px 20px 40px}.hero-inner{max-width:1120px;margin:auto}.eyebrow{font-size:11px;letter-spacing:2px;color:#f2d88b;font-weight:bold;text-transform:uppercase}h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:12px 0}.hero p{color:#e0e8f2;max-width:680px;line-height:1.65;margin:0}.main{max-width:1120px;margin:28px auto;padding:0 20px 32px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:white;border:1px solid var(--line);border-radius:12px;box-shadow:0 5px 20px #18395c0b;overflow:hidden}.cardhead{display:flex;gap:12px;align-items:center;padding:21px 23px;border-bottom:1px solid #edf1f6}.ico{width:40px;height:40px;background:#eaf0f7;color:var(--navy2);border-radius:9px;display:grid;place-items:center;font-size:22px}h2{font-size:18px;margin:0 0 5px}.sub{font-size:12px;color:var(--muted);margin:0;line-height:1.5}form,.body{padding:22px 23px}.field{margin-bottom:15px}label{display:block;font-size:12px;font-weight:bold;margin-bottom:7px;color:#344a65}input,select{width:100%;height:43px;border:1px solid #d5dfeb;border-radius:7px;padding:0 12px;font-size:14px;color:#263c56;background:#fff}input:focus,select:focus{outline:2px solid #aac1dc;border-color:#7293b8}.two{display:grid;grid-template-columns:1fr 1fr;gap:13px}button{width:100%;height:46px;border:0;border-radius:7px;background:var(--navy2);color:white;font-weight:bold;font-size:14px;cursor:pointer}button:hover{background:var(--navy)}.secondary{margin-top:9px;background:#edf2f8;color:var(--navy)}.secondary:hover{background:#e0e9f3}.empty{border:1px dashed #cbd7e5;border-radius:9px;padding:28px 18px;text-align:center;color:var(--muted);font-size:13px;line-height:1.7}.empty strong{display:block;color:#3a536f;font-size:15px;margin-bottom:5px}.criteria{margin-top:16px;background:#f5f8fc;border:1px solid #dce7f4;border-radius:9px;padding:14px 16px}.criteria h3{font-size:12px;margin:0 0 8px}.criteria ul{font-size:12px;color:#526982;line-height:1.9;margin:0;padding-left:18px}
+#resultPage{display:none}.resulttop{text-align:center;padding:28px 20px 20px}.check{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;margin:0 auto 15px;background:#e5f6ec;border:2px solid #9fd7b5;color:#18814b;font-size:38px;font-weight:bold}.resulttop h2{font-size:clamp(23px,3vw,32px);color:#167447;margin:0 0 9px}.resulttop p{font-size:14px;color:#526982;line-height:1.6;margin:0}.ribbon{display:inline-block;border:1px solid #d7b45b;background:#fff9e8;color:#795c18;font-size:10px;font-weight:bold;letter-spacing:1px;padding:7px 10px;border-radius:4px;margin-bottom:18px}.resultdetails{margin:0 22px 20px;border:1px solid #dce5ef;border-radius:9px;padding:16px 18px}.resultdetails h3{font-size:12px;letter-spacing:.7px;margin:0 0 10px;color:#4a607a}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-bottom:1px solid #eef2f6;padding:9px 0;font-size:13px}.row:last-child{border:0}.row span{color:#65778d}.actions{padding:0 22px 22px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions button{font-size:12px}.foot{text-align:center;background:#142d4b;color:#dbe5f1;padding:19px 15px;font-size:11px;line-height:1.8}.foot strong{color:white;letter-spacing:1px}.fineprint{font-size:10px;color:#aabbd0;margin-top:4px}
+@media(max-width:800px){.navlinks{display:none}.columns{grid-template-columns:1fr}.main{margin-top:18px}.hero{padding:30px 20px}}@media(max-width:480px){.tag{font-size:9px}.brand{font-size:20px}.two{grid-template-columns:1fr;gap:0}.actions{grid-template-columns:1fr}.cardhead,form,.body{padding:18px}}
+</style>
+</head>
+<body>
+<nav>
+ <div class="brand"><div class="crest">★</div><div>AKABRI<small>TNI · POLRI</small></div></div>
+ <div class="navlinks"><span>⌂ Beranda</span><span>▤ Penerimaan</span><span>ⓘ Informasi</span><span>▣ Panduan</span></div>
+ <div class="tag">DESAIN CONTOH</div>
+</nav>
+<section class="hero"><div class="hero-inner">
+ <div class="eyebrow">Portal informasi penerimaan</div>
+ <h1 id="heroTitle">Penerimaan Calon Taruna<br>AKABRI</h1>
+ <p id="heroText">Halaman desain untuk menampilkan formulir data peserta dan contoh tampilan hasil pemeriksaan kriteria.</p>
+</div></section>
+<div class="main">
+ <div id="formPage" class="columns">
+  <section class="card">
+   <div class="cardhead"><div class="ico">♙</div><div><h2>Data Calon Peserta</h2><p class="sub">Masukkan data untuk melihat tampilan hasil.</p></div></div>
+   <form id="form">
+    <div class="field"><label for="nama">NAMA LENGKAP</label><input id="nama" maxlength="80" placeholder="Masukkan nama lengkap" required></div>
+    <div class="two">
+     <div class="field"><label for="tinggi">TINGGI BADAN (METER)</label><input id="tinggi" type="number" min=".5" max="2.8" step=".01" placeholder="1.70" required></div>
+     <div class="field"><label for="berat">BERAT BADAN (KG)</label><input id="berat" type="number" min="1" max="300" step=".1" placeholder="65" required></div>
+    </div>
+    <div class="field"><label for="nilai">NILAI RAPOR (0–100)</label><input id="nilai" type="number" min="0" max="100" step=".1" placeholder="92" required></div>
+    <div class="field"><label for="buta">STATUS BUTA WARNA</label><select id="buta" required><option value="" selected disabled>Pilih status</option><option value="0">Tidak</option><option value="1">Ya</option></select></div>
+    <button type="submit">PERIKSA DATA PESERTA</button><button class="secondary" type="reset">Reset formulir</button>
+   </form>
+  </section>
+  <section class="card">
+   <div class="cardhead"><div class="ico">▤</div><div><h2>Informasi Hasil</h2><p class="sub">Panel hasil akan ditampilkan setelah data diproses.</p></div></div>
+   <div class="body">
+    <div class="empty"><strong>Belum ada data yang diperiksa</strong>Lengkapi formulir di sebelah kiri untuk menampilkan halaman hasil.</div>
+    <div class="criteria"><h3>KRITERIA PADA DESAIN INI</h3><ul><li>Tinggi badan minimal 1,60 meter</li><li>Berat badan minimal 40 kilogram</li><li>Nilai rapor minimal 90</li><li>Status buta warna: tidak</li></ul></div>
+   </div>
+  </section>
+ </div>
+ <section id="resultPage" class="card">
+  <div class="resulttop">
+   <div class="ribbon">PORTAL · PENGUMUMAN RESMI</div>
+   <div class="check" id="checkIcon">✓</div>
+   <h2 id="resultHeading">SELAMAT!</h2>
+   <p id="resultMessage">Data memenuhi kriteria pada contoh ini.</p>
+  </div>
+  <div class="resultdetails">
+   <h3>IDENTITAS CALON PESERTA</h3>
+   <div class="row"><span>Nama lengkap</span><strong id="rNama">—</strong></div>
+   <div class="row"><span>Tinggi badan</span><strong id="rTinggi">—</strong></div>
+   <div class="row"><span>Berat badan</span><strong id="rBerat">—</strong></div>
+   <div class="row"><span>Nilai rapor</span><strong id="rNilai">—</strong></div>
+   <div class="row"><span>Buta warna</span><strong id="rButa">—</strong></div>
+   <div class="row"><span>Status</span><strong id="rStatus">—</strong></div>
+  </div>
+  <div class="actions"><button id="backBtn" type="button">KEMBALI KE FORMULIR</button><button id="printBtn" type="button">CETAK / SIMPAN PDF</button></div>
+ </section>
+</div>
+<footer class="foot"><strong>AKABRI · DESAIN PORTAL</strong><br>Disiplin · Profesional · Berintegritas<div class="fineprint">Desain nonresmi untuk keperluan demonstrasi visual. Bukan layanan atau pengumuman dari TNI/Polri.</div></footer>
+<script>
+const form=document.getElementById('form'), formPage=document.getElementById('formPage'), resultPage=document.getElementById('resultPage');
+function fmt(n,d=2){return Number(n).toLocaleString('id-ID',{maximumFractionDigits:d});}
+function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+ const nama=document.getElementById('nama').value.trim(),tinggi=Number(document.getElementById('tinggi').value),berat=Number(document.getElementById('berat').value),nilai=Number(document.getElementById('nilai').value),buta=document.getElementById('buta').value;
+ const pass=tinggi>=1.6&&berat>=40&&nilai>=90&&buta==='0';
+ document.getElementById('rNama').textContent=nama;
+ document.getElementById('rTinggi').textContent=fmt(tinggi)+' m';
+ document.getElementById('rBerat').textContent=fmt(berat,1)+' kg';
+ document.getElementById('rNilai').textContent=fmt(nilai,1);
+ document.getElementById('rButa').textContent=buta==='0'?'Tidak':'Ya';
+ document.getElementById('rStatus').textContent=pass?'Memenuhi kriteria contoh':'Belum memenuhi kriteria contoh';
+ document.getElementById('resultHeading').textContent=pass?'SELAMAT! LOLOS SELEKSI AKABRI':'HASIL PEMERIKSAAN DATA';
+ document.getElementById('resultMessage').textContent=pass?'Selamat, '+nama+'. Data yang dimasukkan memenuhi kriteria pada desain ini.':'Data '+nama+' belum memenuhi seluruh kriteria yang digunakan pada desain ini.';
+ document.getElementById('checkIcon').textContent=pass?'✓':'!';
+ document.getElementById('checkIcon').style.background=pass?'#e5f6ec':'#fff0ee';
+ document.getElementById('checkIcon').style.color=pass?'#18814b':'#a23d32';
+ document.getElementById('resultHeading').style.color=pass?'#167447':'#9b382e';
+ formPage.style.display='none';resultPage.style.display='block';window.scrollTo({top:0,behavior:'smooth'});
+});
+form.addEventListener('reset',()=>{});
+document.getElementById('backBtn').addEventListener('click',()=>{resultPage.style.display='none';formPage.style.display='grid';window.scrollTo({top:0,behavior:'smooth'});});
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+</script>
+<style>@media print{nav,.hero,.actions,.foot{display:none!important}body{background:white}.main{margin:0;max-width:none}.resulttop{padding-top:10px}#resultPage{display:block!important;box-shadow:none;border:0}.ribbon{display:inline-block!important}}</style>
+</body>
+</html>
